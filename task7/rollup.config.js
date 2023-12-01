@@ -3,6 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import replace from '@rollup/plugin-replace';
 import css from "rollup-plugin-import-css";
+import svg from 'rollup-plugin-svg'
 
 export default {
    input: 'src/index.js',
@@ -24,6 +25,7 @@ export default {
          preventAssignment: false,
          'process.env.NODE_ENV': '"development"'
       }),
-      css()
+      css(),
+      svg()
    ]
 }
